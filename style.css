@@ -114,36 +114,6 @@ aside.sidebar {
     font-weight: 700;
 }
 
-.avatar-pulse {
-    position: absolute;
-    top: -4px;
-    right: -4px;
-    width: 14px;
-    height: 14px;
-    background: #10b981;
-    border-radius: 50%;
-    border: 2px solid var(--bg-dark);
-    box-shadow: 0 0 8px #10b981;
-}
-
-.sidebar-name {
-    font-family: var(--font-heading);
-    font-size: 2.6em;
-    font-weight: 800;
-    line-height: 0.95;
-    letter-spacing: -2px;
-    margin-bottom: 12px;
-}
-
-.name-solid {
-    color: var(--text-primary);
-}
-
-.name-stroke {
-    color: var(--bg-dark);
-    -webkit-text-stroke: 1.5px var(--accent-violet);
-}
-
 .profile-info h2 {
     font-family: var(--font-body);
     font-size: 1.05em;
@@ -151,20 +121,6 @@ aside.sidebar {
     color: var(--text-secondary);
     margin-bottom: 15px;
     letter-spacing: 0.5px;
-}
-
-.status-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background: rgba(16, 185, 129, 0.05);
-    color: #34d399;
-    padding: 6px 12px;
-    border-radius: 8px;
-    font-size: 0.85em;
-    font-weight: 600;
-    border: 2px solid rgba(16, 185, 129, 0.15);
-    align-self: flex-start;
 }
 
 /* Contact and Social Links in Sidebar */
