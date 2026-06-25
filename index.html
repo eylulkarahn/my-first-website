@@ -85,7 +85,10 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <p>I am a 3rd (?) year Computer Engineering student at Hacettepe University.
+                    <p>I am a Computer Engineering student at Hacettepe University. I worked on both
+                        low-level design and high-level coding. I have built small projects
+                        using Python, C, C++, Java, and SystemVerilog .
+
                 </div>
             </section>
 
@@ -127,14 +130,14 @@
                 </div>
                 <div class="card-body">
                     <div class="projects-container">
-                        <div class="project-item" data-project="assembler">
+                        <div class="project-item" data-project="aetheria">
                             <div class="project-title">
-                                MIPS Assembler
-                                <span class="project-meta">C · May 2026</span>
+                                Aetheria Smart City Infrastructure
+                                <span class="project-meta">Java · May 2026</span>
                             </div>
                             <div class="project-desc">
-                                A command-line tool in C that parses MIPS assembly instructions and compiles them into
-                                binary machine code.
+                                A system implementing graph and digraph algorithms (MST, topological sort, SCC, and BFS)
+                                to optimize and secure city infrastructure.
                             </div>
                         </div>
 
@@ -149,16 +152,6 @@
                             </div>
                         </div>
 
-                        <div class="project-item" data-project="smarthome">
-                            <div class="project-title">
-                                Smart Home Simulator
-                                <span class="project-meta">Java · May 2026</span>
-                            </div>
-                            <div class="project-desc">
-                                An object-oriented simulation engine in Java to manage states and track energy
-                                consumption of smart devices.
-                            </div>
-                        </div>
 
                         <div class="project-item" data-project="mediplan">
                             <div class="project-title">
@@ -171,14 +164,25 @@
                             </div>
                         </div>
 
-                        <div class="project-item" data-project="sql">
+                        <div class="project-item" data-project="mipsprocessor">
                             <div class="project-title">
-                                Simple Database Management System
-                                <span class="project-meta">Python · Nov 2024</span>
+                                Single-Cycle MIPS Processor
+                                <span class="project-meta">SystemVerilog · Jun 2026</span>
                             </div>
                             <div class="project-desc">
-                                A lightweight, in-memory SQL database simulator in Python supporting basic create,
-                                update, delete operations, filtering, and table joins.
+                                A single-cycle 32-bit MIPS Processor designed, modeled, and simulated using
+                                SystemVerilog.
+                            </div>
+                        </div>
+
+                        <div class="project-item" data-project="platformgame">
+                            <div class="project-title">
+                                2D Platform Game
+                                <span class="project-meta">JavaFX · May 2026</span>
+                            </div>
+                            <div class="project-desc">
+                                A 2D side-scrolling platformer game developed with JavaFX, featuring physics, collision
+                                detection, and camera tracking.
                             </div>
                         </div>
                     </div>
@@ -245,17 +249,18 @@
 
     <script>
         const projectsData = {
-            assembler: {
-                title: "MIPS Assembler",
-                tag: "C Language",
-                github: "https://github.com/eylulkarahn/computer-organization-mips/tree/main/mips-assembler-c",
+            aetheria: {
+                title: "Aetheria Smart City Infrastructure",
+                tag: "Java",
+                github: "https://github.com/eylulkarahn/algorithms-laboratory/tree/main/aetheria-smart-city-infrastructure",
                 content: `
-                    <p>A terminal tool written in C that translates MIPS assembly into binary machine code.</p>
+                    <p>A Java application executing critical graph algorithms to manage city-scale infrastructure.</p>
                     <h5>Details:</h5>
                     <ul>
-                        <li>Parses standard MIPS instruction set formats (R, I, and J-type).</li>
-                        <li>Generates binary encodings for registers and instruction opcodes.</li>
-                        <li>Includes syntax checks for instruction labels.</li>
+                        <li>Optimizes power grid cabling cost using Minimum Spanning Tree (MST) algorithms.</li>
+                        <li>Schedules system dependencies and detects startup cycles (deadlocks) via Topological Sorting.</li>
+                        <li>Identifies communication hubs using Strongly Connected Components (SCC).</li>
+                        <li>Traces bio-leak propagation using Breadth-First Search (BFS).</li>
                     </ul>
                 `
             },
@@ -273,20 +278,6 @@
                     </ul>
                 `
             },
-            smarthome: {
-                title: "Smart Home Simulator",
-                tag: "Java",
-                github: "https://github.com/eylulkarahn/bbm-104-java-projects/tree/main/smart%20home",
-                content: `
-                    <p>A Java OOP-based simulation tool that tracks device power state and resource metrics.</p>
-                    <h5>Details:</h5>
-                    <ul>
-                        <li>Maintains states for smart plugs, cameras, white lamps, and color lamps.</li>
-                        <li>Computes video storage tracking and electricity consumption metrics.</li>
-                        <li>Features dynamic simulation timelines and text-command execution.</li>
-                    </ul>
-                `
-            },
             mediplan: {
                 title: "MediPlan Diagnostic Planner",
                 tag: "C++",
@@ -301,17 +292,31 @@
                     </ul>
                 `
             },
-            sql: {
-                title: "SQL Database Simulator",
-                tag: "Python",
-                github: "https://github.com/eylulkarahn",
+            mipsprocessor: {
+                title: "Single-Cycle MIPS Processor",
+                tag: "SystemVerilog",
+                github: "https://github.com/eylulkarahn/computer-organization-mips/tree/main/systemverilog-mips-processor",
                 content: `
-                    <p>An in-memory SQL database simulator written in Python.</p>
+                    <p>A single-cycle 32-bit MIPS Processor designed and simulated in hardware description language.</p>
                     <h5>Details:</h5>
                     <ul>
-                        <li>Simulates core SQL statements: CREATE TABLE, INSERT INTO, SELECT, UPDATE, DELETE, and JOIN.</li>
-                        <li>Parses conditional expressions in WHERE clauses for record filtering.</li>
-                        <li>Developed for Hacettepe University BBM103 course.</li>
+                        <li>Models hardware components: ALU, Register File, memory controllers, and Control Unit.</li>
+                        <li>Decodes standard instruction formats matching the MIPS ISA.</li>
+                        <li>Verified using simulation testbenches and GTKWave trace analysis.</li>
+                    </ul>
+                `
+            },
+            platformgame: {
+                title: "2D Platform Game",
+                tag: "JavaFX",
+                github: "https://github.com/eylulkarahn/bbm-104-java-projects/tree/main/2d-platform-game-javafx",
+                content: `
+                    <p>A 2D side-scrolling platformer game utilizing the JavaFX framework.</p>
+                    <h5>Details:</h5>
+                    <ul>
+                        <li>Implements character jumping/falling physics with real-time gravity calculations.</li>
+                        <li>Handles dynamic spawning of Apple collectibles and Spike hazards.</li>
+                        <li>Utilizes camera scroll-tracking to keep the player centered in a wide game world.</li>
                     </ul>
                 `
             }
